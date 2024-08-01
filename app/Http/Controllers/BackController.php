@@ -13,20 +13,23 @@ class BackController extends Controller
         return response()->json(['success' => true], 200);
     }
 
-    public function handlePost(Request $request)
+    public function handlePost(Request $request, $type)
     {
 
+        Log::info('datos de la solicitud: ' . $request);
+        Log::info('datos type: ' . $type);
+        return response()->json(['success' => true], 200);
+        // Log::info('datos de la solicitud: ' . $request);
         // Obtener todos los datos de la solicitud (form-data, x-www-form-urlencoded, json)
-        $allData = $request->all();
-        Log::info('datos de la solicitud: ' . json_encode($allData));
+        // $allData = $request->all();
+        // Log::info('datos de la solicitud: ' . json_encode($allData));
 
-        // Procesar los datos
-        if (!empty($allData)) {
-            $response = ['success' => true, 'message' => 'Datos form recibidos', 'data' => $allData];
-        } else {
-            $response = ['success' => false, 'message' => 'No se recibieron datos'];
-        }
-
-        return response()->json($response, 200);
+        // // Procesar los datos
+        // if (!empty($allData)) {
+        //     $response = ['success' => true, 'message' => 'Datos form recibidos', 'data' => $allData];
+        // } else {
+        //     $response = ['success' => false, 'message' => 'No se recibieron datos'];
+        // }
+        // return response()->json($response, 200);
     }
 }

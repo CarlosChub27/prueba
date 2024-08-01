@@ -4,6 +4,7 @@ use App\Http\Controllers\BackController;
 use App\Http\Controllers\PDFController;
 use App\Livewire\ArchivosMultiples;
 use App\Livewire\Counter;
+use App\Livewire\Facephi;
 use App\Livewire\Prueba;
 use App\Livewire\Prueba2;
 use Illuminate\Support\Facades\Route;
@@ -30,3 +31,4 @@ Route::get('/archivos', ArchivosMultiples::class);
 
 Route::get('/prueba', [BackController::class, 'handleGet']);
 Route::post('/back', [BackController::class, 'handlePost']);
+Route::get('/facephi', Facephi::class);
