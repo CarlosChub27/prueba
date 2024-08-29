@@ -3,6 +3,7 @@
 use App\Http\Controllers\BackController;
 use App\Http\Controllers\PDFController;
 use App\Livewire\ArchivosMultiples;
+use App\Livewire\CkEditor;
 use App\Livewire\Counter;
 use App\Livewire\Facephi;
 use App\Livewire\Prueba;
@@ -32,3 +33,4 @@ Route::get('/archivos', ArchivosMultiples::class);
 Route::get('/prueba', [BackController::class, 'handleGet']);
 Route::post('/back', [BackController::class, 'handlePost']);
 Route::get('/facephi', Facephi::class);
+Route::get('/ckeditor', CkEditor::class);
