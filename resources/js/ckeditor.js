@@ -49,7 +49,7 @@ import translations from 'ckeditor5/translations/es.js';
 
 import 'ckeditor5/ckeditor5.css'; //Este es para el componente en si
 
-import '../css/ckeditor.css'; //Este es para el los estilos externos.
+import '../css/ckeditor.css'; //Este es para el los estilos externos. old
 
 const editorConfig = {
     toolbar: {
